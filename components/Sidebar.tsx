@@ -19,7 +19,6 @@ export default function Sidebar() {
       className="hidden md:flex md:w-[72px] lg:w-60 min-h-screen flex-shrink-0 flex-col py-8"
       style={{ background: "var(--bg-surface)", borderRight: "1px solid var(--border-subtle)" }}
     >
-      {/* Logo */}
       <div className="px-4 mb-10 flex items-center gap-3 overflow-hidden">
         <div className="flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center"
           style={{
@@ -34,13 +33,11 @@ export default function Sidebar() {
         </span>
       </div>
 
-      {/* Label */}
       <p className="px-4 text-[10px] font-bold tracking-[0.2em] uppercase mb-3 hidden lg:block"
         style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}>
         Navigation
       </p>
 
-      {/* Nav */}
       <nav className="flex-1 space-y-1 px-3">
         {items.map((item) => {
           const Icon = item.icon;
@@ -71,7 +68,6 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* PRO badge — fixed overflow */}
       <div className="mx-3 mt-6 p-3 rounded-xl hidden lg:block"
         style={{ background: "var(--accent-dim)", border: "1px solid var(--accent-mid)" }}>
         <p className="text-xs font-bold mb-1"

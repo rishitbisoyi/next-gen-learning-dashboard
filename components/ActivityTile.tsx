@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Activity } from "lucide-react";
 
-// 10 weeks × 7 days = 70 cells, column-major (week by week)
 const activity = [
   3,0,2,4,1,3,0,
   2,4,0,3,1,2,4,
@@ -41,12 +40,10 @@ export default function ActivityTile() {
 
   return (
     <article className="glass-card rounded-3xl p-5 relative overflow-hidden flex flex-col">
-      {/* Subtle bg */}
       <div aria-hidden className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 80% 50% at 50% 100%, rgba(0,229,204,0.04) 0%, transparent 70%)" }} />
 
       <div className="relative z-10 flex flex-col h-full">
-        {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-lg flex items-center justify-center"
@@ -63,7 +60,6 @@ export default function ActivityTile() {
           </span>
         </div>
 
-        {/* Month labels */}
         <div className="flex mb-1" style={{ paddingLeft: 18 }}>
           {months.map((m) => (
             <div key={m} className="flex-1 text-center"
@@ -73,9 +69,7 @@ export default function ActivityTile() {
           ))}
         </div>
 
-        {/* Grid */}
         <div className="flex gap-1 flex-1">
-          {/* Day labels */}
           <div className="flex flex-col" style={{ gap: 3, paddingTop: 1 }}>
             {["M","","W","","F","","S"].map((d, i) => (
               <div key={i} style={{
@@ -90,7 +84,6 @@ export default function ActivityTile() {
             ))}
           </div>
 
-          {/* 10 columns × 7 rows */}
           <div className="flex-1 grid" style={{
             gridTemplateColumns: "repeat(10, 1fr)",
             gridTemplateRows: "repeat(7, 11px)",
@@ -109,7 +102,6 @@ export default function ActivityTile() {
           </div>
         </div>
 
-        {/* Legend */}
         <div className="flex items-center gap-1.5 mt-3 justify-end">
           <span style={{ fontSize: 8, color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}>Less</span>
           {[0,1,2,3,4].map((l) => (

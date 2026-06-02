@@ -19,7 +19,6 @@ const icons = {
   Layers,
 };
 
-// Assign a unique accent color per card based on icon
 const accentMap: Record<string, { color: string; glow: string; bg: string }> = {
   Code:     { color: "#00e5cc", glow: "rgba(0,229,204,0.2)",    bg: "rgba(0,229,204,0.07)"    },
   Rocket:   { color: "#f59e0b", glow: "rgba(245,158,11,0.2)",   bg: "rgba(245,158,11,0.07)"   },
@@ -46,7 +45,6 @@ export default function CourseCard({ course }: CourseCardProps) {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="glass-card rounded-3xl p-6 relative overflow-hidden cursor-pointer group h-full"
     >
-      {/* Hover glow border overlay */}
       <div
         className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{
@@ -54,7 +52,6 @@ export default function CourseCard({ course }: CourseCardProps) {
         }}
       />
 
-      {/* Abstract gradient mesh background */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -63,7 +60,6 @@ export default function CourseCard({ course }: CourseCardProps) {
         }}
       />
 
-      {/* Static subtle bg */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -73,7 +69,6 @@ export default function CourseCard({ course }: CourseCardProps) {
       />
 
       <div className="relative z-10 flex flex-col h-full">
-        {/* Icon */}
         <div
           className="w-11 h-11 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0"
           style={{
@@ -84,7 +79,6 @@ export default function CourseCard({ course }: CourseCardProps) {
           <Icon className="h-5 w-5" style={{ color: accent.color }} strokeWidth={2} />
         </div>
 
-        {/* Title */}
         <h3
           className="font-bold text-sm leading-snug mb-auto"
           style={{ color: "var(--text-primary)", fontFamily: "var(--font-display)" }}
@@ -92,7 +86,6 @@ export default function CourseCard({ course }: CourseCardProps) {
           {course.title}
         </h3>
 
-        {/* Progress */}
         <div className="mt-5">
           <div className="flex items-center justify-between mb-2">
             <span
@@ -112,7 +105,6 @@ export default function CourseCard({ course }: CourseCardProps) {
             </motion.span>
           </div>
 
-          {/* Progress track */}
           <div
             className="h-1.5 w-full rounded-full overflow-hidden relative"
             style={{ background: "rgba(255,255,255,0.06)" }}

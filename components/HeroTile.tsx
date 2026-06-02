@@ -14,7 +14,6 @@ export default function HeroTile() {
     <article
       className="glass-card rounded-3xl p-7 relative overflow-hidden col-span-full lg:col-span-2"
     >
-      {/* Gradient mesh background */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -26,14 +25,12 @@ export default function HeroTile() {
         }}
       />
 
-      {/* Decorative rings */}
       <div aria-hidden className="absolute -right-12 -top-12 w-56 h-56 rounded-full pointer-events-none"
         style={{ border: "1px solid rgba(0,229,204,0.07)" }} />
       <div aria-hidden className="absolute -right-4 -top-4 w-32 h-32 rounded-full pointer-events-none"
         style={{ border: "1px solid rgba(0,229,204,0.1)" }} />
 
       <div className="relative z-10 flex flex-col h-full">
-        {/* Top row: greeting + streak badge */}
         <div className="flex items-start justify-between flex-wrap gap-4">
           <div>
             <p
@@ -56,7 +53,6 @@ export default function HeroTile() {
             </p>
           </div>
 
-          {/* Streak badge */}
           <motion.div
             initial={{ scale: 0.85, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -81,10 +77,8 @@ export default function HeroTile() {
           </motion.div>
         </div>
 
-        {/* Divider */}
         <div className="mt-6 mb-5 h-px w-full" style={{ background: "var(--border-subtle)" }} />
 
-        {/* Stats row */}
         <div className="flex flex-wrap gap-3">
           {stats.map((stat, i) => {
             const Icon = stat.icon;

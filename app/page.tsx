@@ -11,7 +11,6 @@ export default async function Home() {
       className="min-h-screen text-white relative overflow-hidden"
       style={{ background: "var(--bg-base)" }}
     >
-      {/* Ambient background blobs */}
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 overflow-hidden"

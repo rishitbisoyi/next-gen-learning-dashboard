@@ -35,7 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Grain overlay */
 body::before {
   content: "";
   position: fixed;
@@ -46,12 +45,10 @@ body::before {
   z-index: 9999;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg-base); }
 ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 2px; }
 
-/* Progress bar shimmer */
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(400%); }
@@ -65,7 +62,6 @@ body::before {
   animation: shimmer 2.2s ease-in-out infinite;
 }
 
-/* Skeleton pulse */
 @keyframes pulse-dark {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 0.7; }
@@ -77,7 +73,6 @@ body::before {
   border-radius: 12px;
 }
 
-/* Flame flicker */
 @keyframes flicker {
   0%, 100% { transform: scaleY(1) rotate(-1deg); }
   25% { transform: scaleY(1.05) rotate(1deg); }
@@ -91,12 +86,10 @@ body::before {
   transform-origin: bottom center;
 }
 
-/* Glow text */
 .glow-text {
   text-shadow: 0 0 20px rgba(0, 229, 204, 0.4);
 }
 
-/* Glass card */
 .glass-card {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
