@@ -2,8 +2,8 @@
 
 A high-fidelity, animated student learning dashboard built for the Frontend Intern Challenge. Designed around a premium "Obsidian OS" aesthetic — deep dark backgrounds, electric cyan accents, and buttery-smooth Framer Motion animations throughout.
 
-**Live Demo:** [(https://next-gen-learning-dashboard-sage.vercel.app/) ] 
-**Repository:** [(https://github.com/rishitbisoyi/next-gen-learning-dashboard)]
+**Live Demo:** [https://next-gen-learning-dashboard-sage.vercel.app/] 
+**Repository:** [https://github.com/rishitbisoyi/next-gen-learning-dashboard]
 
 ---
 
